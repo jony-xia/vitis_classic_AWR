@@ -1,0 +1,10 @@
+16:03:44 **** Build of configuration Debug for project APP_AWR_SER_system ****
+make all 
+Generating bif file for the system project
+generate_system_bif.bat 55530 D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/HW_AWR_test.xpfm standalone_domain D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/APP_AWR_SER_system/Debug/system.bif
+sdcard_gen --xpfm D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/HW_AWR_test.xpfm --sys_config HW_AWR_test --bif D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/APP_AWR_SER_system/Debug/system.bif --bitstream D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/APP_AWR_SER/_ide/bitstream/design_A2.bit --elf D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/APP_AWR_SER/Debug/APP_AWR_SER.elf,ps7_cortexa9_0
+creating BOOT.BIN using D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/APP_AWR_SER/_ide/bitstream/design_A2.bit
+Running C:/Xilinx/Vitis/2023.2/bin/bootgen  -image D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/APP_AWR_SER_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+16:03:51 Build Finished (took 6s.414ms)
+

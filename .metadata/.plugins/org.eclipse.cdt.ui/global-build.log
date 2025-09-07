@@ -1,0 +1,24 @@
+Nothing to build in platform 'HW_AWR_test'
+
+18:27:18 **** Incremental Build of configuration Debug for project APP_AWR_SER ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/host.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -ID:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bspinclude/include -I"D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\APP_AWR_SER\src" -c -fmessage-length=0 -MT"src/host.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/host.d" -MT"src/host.o" -o "src/host.o" "../src/host.c"
+'Finished building: ../src/host.c'
+' '
+'Building target: APP_AWR_SER.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bsplib/lib -o "APP_AWR_SER.elf"  ./src/ti/control/mmwavelink/src/rl_controller.o ./src/ti/control/mmwavelink/src/rl_device.o ./src/ti/control/mmwavelink/src/rl_driver.o ./src/ti/control/mmwavelink/src/rl_monitoring.o ./src/ti/control/mmwavelink/src/rl_sensor.o  ./src/host.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -lxilflash -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: APP_AWR_SER.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size APP_AWR_SER.elf  |tee "APP_AWR_SER.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 107183	   2608	  23928	 133719	  20a57	APP_AWR_SER.elf
+'Finished building: APP_AWR_SER.elf.size'
+' '
