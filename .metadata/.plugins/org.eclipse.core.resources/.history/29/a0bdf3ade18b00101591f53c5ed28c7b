@@ -4,7 +4,6 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "xgpiops.h"
-#include "ti/control/mmwavelink/include/rl_messages.h"
 
 #define SPI0_DEVICE_ID   XPAR_XSPIPS_0_DEVICE_ID
 #define SPI1_DEVICE_ID   XPAR_XSPIPS_1_DEVICE_ID
@@ -18,10 +17,6 @@
 
 static XSpiPs Spi0, Spi1;
 static XGpioPs Gpio;
-
-
-uint64_t computeCRC(uint8_t *p, uint32_t len, uint8_t width);
-
 
 // SPI打开
 int32_t Host_spiOpen(uint8_t deviceIndex, void **handle)
@@ -109,8 +104,8 @@ int32_t Host_disableDevice(uint8_t deviceIndex)
     return 0;
 }
 
-void Host_asyncEventHandler(uint16_t msgId, uint16_t sbId,
-		uint16_t sbLen, uint16_t* payload)
+void Host_asyncEventHandler(rlUInt16_t msgId, rlUInt16_t sbId,
+                            rlUInt16_t sbLen, rlUInt8_t* payload)
 {
     /* 打印出来，确认收到 */
     printf("AsyncEvent: msgId=0x%04X, sbId=0x%04X, len=%u\n",
@@ -122,16 +117,8 @@ void Host_asyncEventHandler(uint16_t msgId, uint16_t sbId,
     }
 }
 
-int32_t Host_osiSleep(uint32_t delayInMs)
+rlInt32_t Host_osiSleep(uint32_t delayInMs)
 {
     usleep(delayInMs * 1000);   // 转换成微秒
-    return 0;
-}
-
-int Host_computeCRC(unsigned char* data, unsigned int dataLen, unsigned char crcLen,
-                        unsigned char* outCrc)
-{
-    uint64_t crcResult = computeCRC(data, dataLen, (16 << crcLen));
-    memcpy(outCrc, &crcResult, (2 << crcLen));
     return 0;
 }

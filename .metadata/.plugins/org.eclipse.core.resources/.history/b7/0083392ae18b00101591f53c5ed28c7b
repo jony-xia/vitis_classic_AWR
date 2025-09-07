@@ -54,26 +54,6 @@ int main()
 
     clientCtx.timerCb.rlDelay = Host_osiSleep;
 
-    clientCtx.crcCb.rlComputeCRC = Host_computeCRC;
-    clientCtx.crcType = RL_CRC_TYPE_32BIT;
-
-    clientCtx.platform = RL_PLATFORM_HOST;
-    clientCtx.arDevType = RL_AR_DEVICETYPE_22XX;
-
-    retVal = rlDevicePowerOn(deviceMap, clientCtx);
-
-//    rlRfDevCfg_t rfDevCfg = {0x0};
-//    // set global and monitoring async event direction to Host
-//    rfDevCfg.aeDirection = 0x05;
-//    // Set the CRC type of Async event received from RadarSS
-//    rfDevCfg.aeCrcConfig = RL_CRC_TYPE_32BIT;
-//    retVal = rlRfSetDeviceCfg(deviceMap, &rfDevCfg);
-//
-//    rlDevMiscCfg_t devMiscCfg = {0};
-//    // Set the CRC Type for Async Event from MSS
-//    devMiscCfg.aeCrcConfig = RL_CRC_TYPE_32BIT;
-//    retVal = rlDeviceSetMiscConfig(deviceMap, &devMiscCfg);
-
     while(1)
 	{
     	print("Hello World\n\r");

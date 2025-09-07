@@ -9,9 +9,5 @@ int32_t Host_spiRead(void *handle, uint8_t *buf, uint16_t len);
 int32_t Host_spiWrite(void *handle, uint8_t *buf, uint16_t len);
 int32_t Host_enableDevice(uint8_t deviceIndex);
 int32_t Host_disableDevice(uint8_t deviceIndex);
-void Host_asyncEventHandler(uint16_t msgId, uint16_t sbId,
-		uint16_t sbLen, uint16_t* payload);
-int32_t Host_osiSleep(uint32_t delayInMs);
-int Host_computeCRC(unsigned char* data, unsigned int dataLen, unsigned char crcLen,
-                        unsigned char* outCrc);
+
 #endif // HOST_H

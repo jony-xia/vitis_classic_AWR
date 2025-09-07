@@ -45,34 +45,11 @@ int main()
 
     clientCtx.devCtrlCb.rlDeviceDisable = Host_disableDevice;
     clientCtx.devCtrlCb.rlDeviceEnable  = Host_enableDevice;
-//    clientCtx.devCtrlCb.rlDeviceMaskHostIrq   = Host_spiIRQMask;
-//    clientCtx.devCtrlCb.rlDeviceUnMaskHostIrq = Host_spiIRQUnMask;
-//    clientCtx.devCtrlCb.rlRegisterInterruptHandler = Host_registerInterruptHandler;
-//    clientCtx.devCtrlCb.rlDeviceWaitIrqStatus = Host_deviceWaitIrqStatus;
+    clientCtx.devCtrlCb.rlDeviceMaskHostIrq   = Host_spiIRQMask;
+    clientCtx.devCtrlCb.rlDeviceUnMaskHostIrq = Host_spiIRQUnMask;
+    clientCtx.devCtrlCb.rlRegisterInterruptHandler = Host_registerInterruptHandler;
+    clientCtx.devCtrlCb.rlDeviceWaitIrqStatus = Host_deviceWaitIrqStatus;
 
-    clientCtx.eventCb.rlAsyncEvent = Host_asyncEventHandler;
-
-    clientCtx.timerCb.rlDelay = Host_osiSleep;
-
-    clientCtx.crcCb.rlComputeCRC = Host_computeCRC;
-    clientCtx.crcType = RL_CRC_TYPE_32BIT;
-
-    clientCtx.platform = RL_PLATFORM_HOST;
-    clientCtx.arDevType = RL_AR_DEVICETYPE_22XX;
-
-    retVal = rlDevicePowerOn(deviceMap, clientCtx);
-
-//    rlRfDevCfg_t rfDevCfg = {0x0};
-//    // set global and monitoring async event direction to Host
-//    rfDevCfg.aeDirection = 0x05;
-//    // Set the CRC type of Async event received from RadarSS
-//    rfDevCfg.aeCrcConfig = RL_CRC_TYPE_32BIT;
-//    retVal = rlRfSetDeviceCfg(deviceMap, &rfDevCfg);
-//
-//    rlDevMiscCfg_t devMiscCfg = {0};
-//    // Set the CRC Type for Async Event from MSS
-//    devMiscCfg.aeCrcConfig = RL_CRC_TYPE_32BIT;
-//    retVal = rlDeviceSetMiscConfig(deviceMap, &devMiscCfg);
 
     while(1)
 	{
@@ -82,5 +59,3 @@ int main()
     cleanup_platform();
     return 0;
 }
-
-

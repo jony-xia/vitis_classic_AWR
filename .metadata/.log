@@ -7422,3 +7422,291 @@ java.lang.Exception
 
 !ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 18:27:18.790
 !MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-24: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:56:25.134
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:56:25.140
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:56:25.140
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:56:25.140
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 19:56:25.140
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:56:25.147
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:56:25.147
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-07 19:56:27.160
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:41.172
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:41.177
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:41.177
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:41.177
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 19:57:41.177
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:41.181
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:41.182
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-07 19:57:42.143
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:55.228
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:55.230
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:55.230
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:55.234
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 19:57:55.234
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:55.234
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:57:55.234
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-07 19:57:55.997
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:33.818
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:33.822
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:33.822
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:33.824
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 19:58:33.826
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:33.826
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:33.828
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-07 19:58:34.738
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:46.922
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:46.922
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:46.922
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:46.930
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 19:58:46.930
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:46.930
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:58:46.930
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-07 19:58:47.729
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:59:24.768
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:59:24.768
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:59:24.772
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:59:24.774
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 19:59:24.774
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:59:24.774
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 19:59:24.776
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-41: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-07 19:59:25.513
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:09.924
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:09.924
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:09.924
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:09.924
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 20:01:09.924
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:09.924
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:09.924
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-35: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-07 20:01:10.629
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:15.061
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:15.068
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:15.068
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:15.071
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 20:01:15.071
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:15.071
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:15.076
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-07 20:01:16.238
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:35.641
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:35.643
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:35.646
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:35.646
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 20:01:35.646
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:35.646
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:01:35.646
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:05:21.202
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:05:21.205
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:05:21.206
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:05:21.208
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 20:05:21.209
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:05:21.210
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:05:21.211
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-40: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:19:57.712
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Thread: Worker-46: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:19:57.717
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss ], Result: [null, ]. Thread: Worker-46: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:19:57.717
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-46: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:19:57.722
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/hw/design_A2.xsa D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "standalone",
+"osver": "9.0",
+}]. Thread: Worker-46: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-07 20:19:57.722
+!MESSAGE Generating MD5 hash for file: D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\HW_AWR_test\export\HW_AWR_test\sw\HW_AWR_test\standalone_domain\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:19:57.722
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Thread: Worker-46: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-07 20:19:57.722
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/system.mss], Result: [null, ]. Thread: Worker-46: Build Project

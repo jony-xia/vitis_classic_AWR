@@ -1,24 +1,55 @@
 Nothing to build in platform 'HW_AWR_test'
 
-18:27:18 **** Incremental Build of configuration Debug for project APP_AWR_SER ****
+20:19:57 **** Incremental Build of configuration Debug for project APP_AWR_SER ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/host.c'
+'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -ID:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bspinclude/include -I"D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\APP_AWR_SER\src" -c -fmessage-length=0 -MT"src/host.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/host.d" -MT"src/host.o" -o "src/host.o" "../src/host.c"
-'Finished building: ../src/host.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -ID:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bspinclude/include -I"D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\APP_AWR_SER\src" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:35:5: warning: implicit declaration of function 'Host_GPIO_Init' [-Wimplicit-function-declaration]
+   35 |     Host_GPIO_Init();
+      |     ^~~~~~~~~~~~~~
+../src/main.c:41:35: warning: assignment to 'void * (*)(rlUInt8_t,  rlUInt32_t)' {aka 'void * (*)(unsigned char,  unsigned int)'} from incompatible pointer type 'int32_t (*)(uint8_t,  void **)' {aka 'long int (*)(unsigned char,  void **)'} [-Wincompatible-pointer-types]
+   41 |     clientCtx.comIfCb.rlComIfOpen = Host_spiOpen;
+      |                                   ^
+../src/main.c:42:36: warning: assignment to 'rlInt32_t (*)(void *)' {aka 'int (*)(void *)'} from incompatible pointer type 'int32_t (*)(void *)' {aka 'long int (*)(void *)'} [-Wincompatible-pointer-types]
+   42 |     clientCtx.comIfCb.rlComIfClose = Host_spiClose;
+      |                                    ^
+../src/main.c:43:35: warning: assignment to 'rlInt32_t (*)(void *, rlUInt8_t *, rlUInt16_t)' {aka 'int (*)(void *, unsigned char *, short unsigned int)'} from incompatible pointer type 'int32_t (*)(void *, uint8_t *, uint16_t)' {aka 'long int (*)(void *, unsigned char *, short unsigned int)'} [-Wincompatible-pointer-types]
+   43 |     clientCtx.comIfCb.rlComIfRead = Host_spiRead;
+      |                                   ^
+../src/main.c:44:36: warning: assignment to 'rlInt32_t (*)(void *, rlUInt8_t *, rlUInt16_t)' {aka 'int (*)(void *, unsigned char *, short unsigned int)'} from incompatible pointer type 'int32_t (*)(void *, uint8_t *, uint16_t)' {aka 'long int (*)(void *, unsigned char *, short unsigned int)'} [-Wincompatible-pointer-types]
+   44 |     clientCtx.comIfCb.rlComIfWrite = Host_spiWrite;
+      |                                    ^
+../src/main.c:46:41: warning: assignment to 'rlInt32_t (*)(rlUInt8_t)' {aka 'int (*)(unsigned char)'} from incompatible pointer type 'int32_t (*)(uint8_t)' {aka 'long int (*)(unsigned char)'} [-Wincompatible-pointer-types]
+   46 |     clientCtx.devCtrlCb.rlDeviceDisable = Host_disableDevice;
+      |                                         ^
+../src/main.c:47:41: warning: assignment to 'rlInt32_t (*)(rlUInt8_t)' {aka 'int (*)(unsigned char)'} from incompatible pointer type 'int32_t (*)(uint8_t)' {aka 'long int (*)(unsigned char)'} [-Wincompatible-pointer-types]
+   47 |     clientCtx.devCtrlCb.rlDeviceEnable  = Host_enableDevice;
+      |                                         ^
+../src/main.c:53:36: warning: assignment to 'void (*)(rlUInt8_t,  rlUInt16_t,  rlUInt16_t,  rlUInt8_t *)' {aka 'void (*)(unsigned char,  short unsigned int,  short unsigned int,  unsigned char *)'} from incompatible pointer type 'void (*)(uint16_t,  uint16_t,  uint16_t,  uint16_t *)' {aka 'void (*)(short unsigned int,  short unsigned int,  short unsigned int,  short unsigned int *)'} [-Wincompatible-pointer-types]
+   53 |     clientCtx.eventCb.rlAsyncEvent = Host_asyncEventHandler;
+      |                                    ^
+../src/main.c:55:31: warning: assignment to 'rlInt32_t (*)(rlUInt32_t)' {aka 'int (*)(unsigned int)'} from incompatible pointer type 'int32_t (*)(uint32_t)' {aka 'long int (*)(long unsigned int)'} [-Wincompatible-pointer-types]
+   55 |     clientCtx.timerCb.rlDelay = Host_osiSleep;
+      |                               ^
+../src/main.c:80:9: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   80 |         sleep(1);
+      |         ^~~~~
+'Finished building: ../src/main.c'
 ' '
 'Building target: APP_AWR_SER.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bsplib/lib -o "APP_AWR_SER.elf"  ./src/ti/control/mmwavelink/src/rl_controller.o ./src/ti/control/mmwavelink/src/rl_device.o ./src/ti/control/mmwavelink/src/rl_driver.o ./src/ti/control/mmwavelink/src/rl_monitoring.o ./src/ti/control/mmwavelink/src/rl_sensor.o  ./src/host.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -lxilflash -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bsplib/lib -o "APP_AWR_SER.elf"  ./src/ti/control/mmwavelink/src/rl_controller.o ./src/ti/control/mmwavelink/src/rl_device.o ./src/ti/control/mmwavelink/src/rl_driver.o ./src/ti/control/mmwavelink/src/rl_monitoring.o ./src/ti/control/mmwavelink/src/rl_sensor.o  ./src/crc_compute.o ./src/host.o ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -lxilflash -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
 'Finished building target: APP_AWR_SER.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size APP_AWR_SER.elf  |tee "APP_AWR_SER.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 107183	   2608	  23928	 133719	  20a57	APP_AWR_SER.elf
+ 116083	   2656	  23944	 142683	  22d5b	APP_AWR_SER.elf
 'Finished building: APP_AWR_SER.elf.size'
 ' '

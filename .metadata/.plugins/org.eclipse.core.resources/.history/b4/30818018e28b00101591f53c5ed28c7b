@@ -4,7 +4,6 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "xgpiops.h"
-#include "ti/control/mmwavelink/include/rl_messages.h"
 
 #define SPI0_DEVICE_ID   XPAR_XSPIPS_0_DEVICE_ID
 #define SPI1_DEVICE_ID   XPAR_XSPIPS_1_DEVICE_ID
