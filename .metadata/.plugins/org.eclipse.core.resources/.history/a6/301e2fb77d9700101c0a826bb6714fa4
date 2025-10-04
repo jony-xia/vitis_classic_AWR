@@ -1,0 +1,23 @@
+#ifndef HOST_H
+#define HOST_H
+
+#include <stdint.h>
+#include "ti/control/mmwavelink/include/rl_messages.h"
+#include "./ti/control/mmwavelink/mmwavelink.h"
+
+int32_t Init_GPIO(void);
+int32_t Init_INTR(void);
+
+int32_t Host_spiOpen(uint8_t deviceIndex, void **handle);
+int32_t Host_spiClose(void *handle);
+int32_t Host_spiRead(void *handle, uint8_t *buf, uint16_t len);
+int32_t Host_spiWrite(void *handle, uint8_t *buf, uint16_t len);
+int32_t Host_enableDevice(uint8_t deviceIndex);
+int32_t Host_disableDevice(uint8_t deviceIndex);
+//void Host_asyncEventHandler(uint16_t msgId, uint16_t sbId,uint16_t sbLen, uint16_t* payload);int32_t Host_osiSleep(uint32_t delayInMs);
+int Host_computeCRC(unsigned char* data, unsigned int dataLen, unsigned char crcLen,unsigned char* outCrc);
+int32_t Host_registerInterruptHandler(uint8_t deviceIndex,RL_P_EVENT_HANDLER pHandler,void* pValue);
+void Host_spiIRQMask(rlComIfHdl_t fd);
+void Host_spiIRQUnMask(rlComIfHdl_t fd);
+void Host_asyncEventHandler(rlUInt8_t* buff, rlUInt32_t size);
+#endif // HOST_H

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="FileSystemImportWizard">
+		<item key="WizardFileSystemResourceImportPage1.STORE_OVERWRITE_EXISTING_RESOURCES_ID" value="false"/>
+		<item key="WizardFileSystemResourceImportPage1.STORE_CREATE_CONTAINER_STRUCTURE_ID" value="false"/>
+		<list key="WizardFileSystemResourceImportPage1.STORE_SOURCE_NAMES_ID">
+			<item value="C:\ti\mmwave_dfp_02_02_05_00\ti\example\mmWaveLink_Cascade_Example"/>
+			<item value="D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_AWR_SPI"/>
+			<item value="C:\ti\mmwave_dfp_02_02_05_00"/>
+			<item value="C:\ti\mmwave_dfp_02_02_05_00\ti"/>
+		</list>
+	</section>
+	<section name="ImportExportAction">
+	</section>
+</section>

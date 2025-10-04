@@ -23,3 +23,7 @@ bsp write
 bsp reload
 catch {bsp regenerate}
 platform generate
+platform active {HW_AWR_test}
+bsp reload
+platform generate
+platform active {HW_AWR_test}

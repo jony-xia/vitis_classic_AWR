@@ -32,7 +32,8 @@ int main()
     init_platform();
 
     //初始化GPIO相关配置
-    Host_GPIO_Init();
+    Init_GPIO();
+    Init_INTR();
 
     print("Hello World\n\r");
     print("Successfully ran application\n\r");
@@ -45,34 +46,49 @@ int main()
 
     clientCtx.devCtrlCb.rlDeviceDisable = Host_disableDevice;
     clientCtx.devCtrlCb.rlDeviceEnable  = Host_enableDevice;
-//    clientCtx.devCtrlCb.rlDeviceMaskHostIrq   = Host_spiIRQMask;
-//    clientCtx.devCtrlCb.rlDeviceUnMaskHostIrq = Host_spiIRQUnMask;
-//    clientCtx.devCtrlCb.rlRegisterInterruptHandler = Host_registerInterruptHandler;
-//    clientCtx.devCtrlCb.rlDeviceWaitIrqStatus = Host_deviceWaitIrqStatus;
+    clientCtx.devCtrlCb.rlDeviceMaskHostIrq   = Host_spiIRQMask;
+    clientCtx.devCtrlCb.rlDeviceUnMaskHostIrq = Host_spiIRQUnMask;
+    clientCtx.devCtrlCb.rlRegisterInterruptHandler = Host_registerInterruptHandler;
+    clientCtx.devCtrlCb.rlDeviceWaitIrqStatus = Host_deviceWaitIrqStatus;
 
     clientCtx.eventCb.rlAsyncEvent = Host_asyncEventHandler;
+
+//    clientCtx.osiCb.mutex.rlOsiMutexCreate = Host_osiLockObjCreate;
+//    clientCtx.osiCb.mutex.rlOsiMutexLock = Host_osiLockObjLock;
+//    clientCtx.osiCb.mutex.rlOsiMutexUnLock = Host_osiLockObjUnlock;
+//    clientCtx.osiCb.mutex.rlOsiMutexDelete = Host_osiLockObjDelete;
+//
+//    clientCtx.osiCb.sem.rlOsiSemCreate = Host_osiSyncObjCreate;
+//    clientCtx.osiCb.sem.rlOsiSemWait = Host_osiSyncObjWait;
+//    clientCtx.osiCb.sem.rlOsiSemSignal = Host_osiSyncObjSignal;
+//    clientCtx.osiCb.sem.rlOsiSemDelete = Host_osiSyncObjDelete;
+
+//    clientCtx.osiCb.queue.rlOsiSpawn = Host_osiSpawn;
+    clientCtx.osiCb.queue.rlOsiSpawn = NULL;
 
     clientCtx.timerCb.rlDelay = Host_osiSleep;
 
     clientCtx.crcCb.rlComputeCRC = Host_computeCRC;
     clientCtx.crcType = RL_CRC_TYPE_32BIT;
 
+    clientCtx.dbgCb.rlPrint = Host_debugPrint;
+
     clientCtx.platform = RL_PLATFORM_HOST;
     clientCtx.arDevType = RL_AR_DEVICETYPE_22XX;
 
     retVal = rlDevicePowerOn(deviceMap, clientCtx);
 
-//    rlRfDevCfg_t rfDevCfg = {0x0};
-//    // set global and monitoring async event direction to Host
-//    rfDevCfg.aeDirection = 0x05;
-//    // Set the CRC type of Async event received from RadarSS
-//    rfDevCfg.aeCrcConfig = RL_CRC_TYPE_32BIT;
-//    retVal = rlRfSetDeviceCfg(deviceMap, &rfDevCfg);
-//
-//    rlDevMiscCfg_t devMiscCfg = {0};
-//    // Set the CRC Type for Async Event from MSS
-//    devMiscCfg.aeCrcConfig = RL_CRC_TYPE_32BIT;
-//    retVal = rlDeviceSetMiscConfig(deviceMap, &devMiscCfg);
+    rlRfDevCfg_t rfDevCfg = {0x0};
+    // set global and monitoring async event direction to Host
+    rfDevCfg.aeDirection = 0x05;
+    // Set the CRC type of Async event received from RadarSS
+    rfDevCfg.aeCrcConfig = RL_CRC_TYPE_32BIT;
+    retVal = rlRfSetDeviceCfg(deviceMap, &rfDevCfg);
+
+    rlDevMiscCfg_t devMiscCfg = {0};
+    // Set the CRC Type for Async Event from MSS
+    devMiscCfg.aeCrcConfig = RL_CRC_TYPE_32BIT;
+    retVal = rlDeviceSetMiscConfig(deviceMap, &devMiscCfg);
 
     while(1)
 	{

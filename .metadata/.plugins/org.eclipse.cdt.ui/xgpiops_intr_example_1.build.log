@@ -1,0 +1,25 @@
+14:10:41 **** Build of configuration Debug for project xgpiops_intr_example_1 ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/xgpiops_intr_example.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xgpiops_intr_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bspinclude/include -MMD -MP -MF"src/xgpiops_intr_example.d" -MT"src/xgpiops_intr_example.o" -o "src/xgpiops_intr_example.o" "../src/xgpiops_intr_example.c"
+'Finished building: ../src/xgpiops_intr_example.c'
+' '
+'Building target: xgpiops_intr_example_1.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bsplib/lib -o "xgpiops_intr_example_1.elf"  ./src/xgpiops_intr_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group -lxilflash -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: xgpiops_intr_example_1.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size xgpiops_intr_example_1.elf  |tee "xgpiops_intr_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  33959	   1928	  22664	  58551	   e4b7	xgpiops_intr_example_1.elf
+'Finished building: xgpiops_intr_example_1.elf.size'
+' '
+
+14:10:43 Build Finished (took 2s.610ms)
+

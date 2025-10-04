@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="APP_AWR_SER" location="D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/APP_AWR_SER" platform="D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/HW_AWR_test.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="APP_AWR_SER_system" sysConfig="HW_AWR_test" runtime="C/C++" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="4db51ac3ec2833a26f91bbf63f4b2477">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1751847845">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.831671744" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

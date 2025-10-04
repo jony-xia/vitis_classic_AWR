@@ -1,0 +1,212 @@
+#include "xspips.h"
+#include "xparameters.h"
+#include "host.h"
+#include <stdint.h>
+#include <stdio.h>
+#include "xgpiops.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+#include "ti/control/mmwavelink/include/rl_messages.h"
+#include "./ti/control/mmwavelink/mmwavelink.h"
+#define SPI0_DEVICE_ID   XPAR_XSPIPS_0_DEVICE_ID
+#define SPI1_DEVICE_ID   XPAR_XSPIPS_1_DEVICE_ID
+#define INTC_DEVICE_ID		XPAR_SCUGIC_SINGLE_DEVICE_ID
+
+#define GPIO_DEVICE_ID   XPAR_XGPIOPS_0_DEVICE_ID
+#define RESET_PIN_0      54
+#define RESET_PIN_1      56
+#define IRQ_PIN_0        55
+#define IRQ_PIN_1        57
+#define GPIO_BANK	XGPIOPS_BANK0  /* Bank 0 of the GPIO Device */
+
+
+static XSpiPs Spi0, Spi1;
+static XGpioPs Gpio;
+static XScuGic Intc;
+
+uint64_t computeCRC(uint8_t *p, uint32_t len, uint8_t width);
+
+
+// SPI
+int32_t Host_spiOpen(uint8_t deviceIndex, void **handle)
+{
+    XSpiPs_Config *Config;
+    int status;
+
+    if (deviceIndex == 0) {
+        Config = XSpiPs_LookupConfig(SPI0_DEVICE_ID);
+        if (!Config) return -1;
+        status = XSpiPs_CfgInitialize(&Spi0, Config, Config->BaseAddress);
+        *handle = &Spi0;
+    } else if (deviceIndex == 1) {
+        Config = XSpiPs_LookupConfig(SPI1_DEVICE_ID);
+        if (!Config) return -1;
+        status = XSpiPs_CfgInitialize(&Spi1, Config, Config->BaseAddress);
+        *handle = &Spi1;
+    } else {
+        return -1;
+    }
+
+    if (status != XST_SUCCESS) return -1;
+
+    XSpiPs_SetOptions(*handle, XSPIPS_MASTER_OPTION | XSPIPS_FORCE_SSELECT_OPTION);
+    XSpiPs_SetClkPrescaler(*handle, XSPIPS_CLK_PRESCALE_64);
+    XSpiPs_SetSlaveSelect(*handle, 0);
+
+    return 0;
+}
+
+
+int32_t Host_spiClose(void *handle)
+{
+    return 0;
+}
+
+int32_t Host_spiWrite(void *handle, uint8_t *buf, uint16_t len)
+{
+    XSpiPs *Spi = (XSpiPs *)handle;
+    return XSpiPs_PolledTransfer(Spi, buf, NULL, len) == XST_SUCCESS ? 0 : -1;
+}
+
+
+int32_t Host_spiRead(void *handle, uint8_t *buf, uint16_t len)
+{
+    XSpiPs *Spi = (XSpiPs *)handle;
+    uint8_t dummy[256] = {0};
+    if (len > sizeof(dummy)) return -1;
+    return XSpiPs_PolledTransfer(Spi, dummy, buf, len) == XST_SUCCESS ? 0 : -1;
+}
+
+int32_t Init_GPIO(void)
+{
+	XGpioPs_Config *ConfigPtr;
+
+	ConfigPtr = XGpioPs_LookupConfig(GPIO_DEVICE_ID);
+	if (ConfigPtr == NULL) {
+		return -1;
+	}
+	int status = XGpioPs_CfgInitialize(&Gpio, ConfigPtr, ConfigPtr->BaseAddr);
+	if (status != XST_SUCCESS) {
+		return -1;
+	}
+	return 0;
+}
+
+int32_t Init_INTR(void)
+{
+	int Status;
+	XScuGic_Config *IntcConfig; /* Instance of the interrupt controller */
+	Xil_ExceptionInit();
+	/*
+	 * Initialize the interrupt controller driver so that it is ready to
+	 * use.
+	 */
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+	if (NULL == IntcConfig) {
+		return XST_FAILURE;
+	}
+
+	Status = XScuGic_CfgInitialize(&Intc, IntcConfig,
+				       IntcConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,(Xil_ExceptionHandler)XScuGic_InterruptHandler,&Intc);
+
+
+}
+
+
+int32_t Host_enableDevice(uint8_t deviceIndex)
+{
+    uint32_t pin = (deviceIndex == 0) ? RESET_PIN_0 : RESET_PIN_1;
+    XGpioPs_SetDirectionPin(&Gpio, pin, 1);
+    XGpioPs_SetOutputEnablePin(&Gpio, pin, 1);
+    XGpioPs_WritePin(&Gpio, pin, 1);
+    return 0;
+}
+
+int32_t Host_disableDevice(uint8_t deviceIndex)
+{
+    uint32_t pin = (deviceIndex == 0) ? RESET_PIN_0 : RESET_PIN_1;
+    XGpioPs_SetDirectionPin(&Gpio, pin, 1);
+    XGpioPs_SetOutputEnablePin(&Gpio, pin, 1);
+    XGpioPs_WritePin(&Gpio, pin, 0);
+    return 0;
+}
+
+void Host_asyncEventHandler(uint16_t msgId, uint16_t sbId,
+		uint16_t sbLen, uint16_t* payload)
+{
+    printf("AsyncEvent: msgId=0x%04X, sbId=0x%04X, len=%u\n",
+           msgId, sbId, sbLen);
+
+    if (msgId == RL_DEV_AE_MSSPOWERUPDONE_SB) {
+        printf("AWR2243 Power up done!\n");
+    }
+}
+
+int32_t Host_osiSleep(uint32_t delayInMs)
+{
+    usleep(delayInMs * 1000);
+    return 0;
+}
+
+int Host_computeCRC(unsigned char* data, unsigned int dataLen, unsigned char crcLen,
+                        unsigned char* outCrc)
+{
+    uint64_t crcResult = computeCRC(data, dataLen, (16 << crcLen));
+    memcpy(outCrc, &crcResult, (2 << crcLen));
+    return 0;
+}
+
+int32_t Host_registerInterruptHandler(uint8_t deviceIndex,
+                                      RL_P_EVENT_HANDLER pHandler,
+                                      void* pValue)
+{
+	XScuGic_Connect(&Intc, XPAR_XGPIOPS_0_INTR,
+					 (Xil_ExceptionHandler)XGpioPs_IntrHandler,
+					 &Gpio);
+
+	XGpioPs_SetIntrType(&Gpio, GPIO_BANK, 0x00, 0xFFFFFFFF, 0x00);
+
+	XGpioPs_SetCallbackHandler(&Gpio,&Gpio,pHandler);
+
+	XGpioPs_IntrEnable(&Gpio, GPIO_BANK, (1 << RESET_PIN_0));
+	XGpioPs_IntrEnable(&Gpio, GPIO_BANK, (1 << RESET_PIN_1));
+
+	XScuGic_Enable(&Intc, XPAR_XGPIOPS_0_INTR);
+
+	Xil_ExceptionEnableMask(XIL_EXCEPTION_IRQ);
+
+}
+
+void Host_spiIRQMask(rlComIfHdl_t fd)
+{
+	Xil_ExceptionDisableMask(XIL_EXCEPTION_IRQ);
+}
+
+void Host_spiIRQUnMask(rlComIfHdl_t fd)
+{
+	Xil_ExceptionEnableMask(XIL_EXCEPTION_IRQ);
+}
+
+int32_t Host_deviceWaitIrqStatus(uint8_t deviceIndex, uint32_t timeoutMs)
+{
+            return 0;
+}
+
+rlInt32_t Host_debugPrint(rlUInt8_t deviceIndex, const rlChar_t* format, ...)
+{
+    va_list args;
+    va_start(args, format);
+    xil_printf("[AWR2243-%d] ", deviceIndex);
+
+    char buffer[256];
+    vsnprintf(buffer, sizeof(buffer), format, args);
+    va_end(args);
+    xil_printf("%s", buffer);
+    return 0;
+}
+

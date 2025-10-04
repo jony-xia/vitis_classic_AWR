@@ -1,44 +1,80 @@
 Nothing to build in platform 'HW_AWR_test'
 
-20:19:57 **** Incremental Build of configuration Debug for project APP_AWR_SER ****
+16:11:04 **** Incremental Build of configuration Debug for project APP_AWR_SER ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
+'Building file: ../src/host.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -ID:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bspinclude/include -I"D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\APP_AWR_SER\src" -c -fmessage-length=0 -MT"src/host.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/host.d" -MT"src/host.o" -o "src/host.o" "../src/host.c"
+../src/host.c: In function 'Host_osiSleep':
+../src/host.c:152:5: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  152 |     usleep(delayInMs * 1000);
+      |     ^~~~~~
+../src/host.c: In function 'Host_registerInterruptHandler':
+../src/host.c:174:48: warning: passing argument 3 of 'XGpioPs_SetCallbackHandler' from incompatible pointer type [-Wincompatible-pointer-types]
+  174 |         XGpioPs_SetCallbackHandler(&Gpio,&Gpio,pHandler);
+      |                                                ^~~~~~~~
+      |                                                |
+      |                                                RL_P_EVENT_HANDLER {aka void (*)(unsigned char,  void *)}
+In file included from ../src/host.c:6:
+D:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bspinclude/include/xgpiops.h:290:46: note: expected 'XGpioPs_Handler' {aka 'void (*)(void *, long unsigned int,  long unsigned int)'} but argument is of type 'RL_P_EVENT_HANDLER' {aka 'void (*)(unsigned char,  void *)'}
+  290 |                              XGpioPs_Handler FuncPointer);
+      |                              ~~~~~~~~~~~~~~~~^~~~~~~~~~~
+../src/host.c:176:49: warning: left shift count >= width of type [-Wshift-count-overflow]
+  176 |         XGpioPs_IntrEnable(&Gpio, GPIO_BANK, (1 << RESET_PIN_0));
+      |                                                 ^~
+../src/host.c:177:49: warning: left shift count >= width of type [-Wshift-count-overflow]
+  177 |         XGpioPs_IntrEnable(&Gpio, GPIO_BANK, (1 << RESET_PIN_1));
+      |                                                 ^~
+../src/host.c: In function 'Init_INTR':
+../src/host.c:118:1: warning: control reaches end of non-void function [-Wreturn-type]
+  118 | }
+      | ^
+../src/host.c: In function 'Host_registerInterruptHandler':
+../src/host.c:183:1: warning: control reaches end of non-void function [-Wreturn-type]
+  183 | }
+      | ^
+'Finished building: ../src/host.c'
+' '
 'Building file: ../src/main.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -ID:/doctor_prjs/mmWave/project_AWR_SPI/vitis_classic_AWR/HW_AWR_test/export/HW_AWR_test/sw/HW_AWR_test/standalone_domain/bspinclude/include -I"D:\doctor_prjs\mmWave\project_AWR_SPI\vitis_classic_AWR\APP_AWR_SER\src" -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
 ../src/main.c: In function 'main':
-../src/main.c:35:5: warning: implicit declaration of function 'Host_GPIO_Init' [-Wimplicit-function-declaration]
-   35 |     Host_GPIO_Init();
-      |     ^~~~~~~~~~~~~~
-../src/main.c:41:35: warning: assignment to 'void * (*)(rlUInt8_t,  rlUInt32_t)' {aka 'void * (*)(unsigned char,  unsigned int)'} from incompatible pointer type 'int32_t (*)(uint8_t,  void **)' {aka 'long int (*)(unsigned char,  void **)'} [-Wincompatible-pointer-types]
-   41 |     clientCtx.comIfCb.rlComIfOpen = Host_spiOpen;
+../src/main.c:42:35: warning: assignment to 'void * (*)(rlUInt8_t,  rlUInt32_t)' {aka 'void * (*)(unsigned char,  unsigned int)'} from incompatible pointer type 'int32_t (*)(uint8_t,  void **)' {aka 'long int (*)(unsigned char,  void **)'} [-Wincompatible-pointer-types]
+   42 |     clientCtx.comIfCb.rlComIfOpen = Host_spiOpen;
       |                                   ^
-../src/main.c:42:36: warning: assignment to 'rlInt32_t (*)(void *)' {aka 'int (*)(void *)'} from incompatible pointer type 'int32_t (*)(void *)' {aka 'long int (*)(void *)'} [-Wincompatible-pointer-types]
-   42 |     clientCtx.comIfCb.rlComIfClose = Host_spiClose;
+../src/main.c:43:36: warning: assignment to 'rlInt32_t (*)(void *)' {aka 'int (*)(void *)'} from incompatible pointer type 'int32_t (*)(void *)' {aka 'long int (*)(void *)'} [-Wincompatible-pointer-types]
+   43 |     clientCtx.comIfCb.rlComIfClose = Host_spiClose;
       |                                    ^
-../src/main.c:43:35: warning: assignment to 'rlInt32_t (*)(void *, rlUInt8_t *, rlUInt16_t)' {aka 'int (*)(void *, unsigned char *, short unsigned int)'} from incompatible pointer type 'int32_t (*)(void *, uint8_t *, uint16_t)' {aka 'long int (*)(void *, unsigned char *, short unsigned int)'} [-Wincompatible-pointer-types]
-   43 |     clientCtx.comIfCb.rlComIfRead = Host_spiRead;
+../src/main.c:44:35: warning: assignment to 'rlInt32_t (*)(void *, rlUInt8_t *, rlUInt16_t)' {aka 'int (*)(void *, unsigned char *, short unsigned int)'} from incompatible pointer type 'int32_t (*)(void *, uint8_t *, uint16_t)' {aka 'long int (*)(void *, unsigned char *, short unsigned int)'} [-Wincompatible-pointer-types]
+   44 |     clientCtx.comIfCb.rlComIfRead = Host_spiRead;
       |                                   ^
-../src/main.c:44:36: warning: assignment to 'rlInt32_t (*)(void *, rlUInt8_t *, rlUInt16_t)' {aka 'int (*)(void *, unsigned char *, short unsigned int)'} from incompatible pointer type 'int32_t (*)(void *, uint8_t *, uint16_t)' {aka 'long int (*)(void *, unsigned char *, short unsigned int)'} [-Wincompatible-pointer-types]
-   44 |     clientCtx.comIfCb.rlComIfWrite = Host_spiWrite;
+../src/main.c:45:36: warning: assignment to 'rlInt32_t (*)(void *, rlUInt8_t *, rlUInt16_t)' {aka 'int (*)(void *, unsigned char *, short unsigned int)'} from incompatible pointer type 'int32_t (*)(void *, uint8_t *, uint16_t)' {aka 'long int (*)(void *, unsigned char *, short unsigned int)'} [-Wincompatible-pointer-types]
+   45 |     clientCtx.comIfCb.rlComIfWrite = Host_spiWrite;
       |                                    ^
-../src/main.c:46:41: warning: assignment to 'rlInt32_t (*)(rlUInt8_t)' {aka 'int (*)(unsigned char)'} from incompatible pointer type 'int32_t (*)(uint8_t)' {aka 'long int (*)(unsigned char)'} [-Wincompatible-pointer-types]
-   46 |     clientCtx.devCtrlCb.rlDeviceDisable = Host_disableDevice;
-      |                                         ^
 ../src/main.c:47:41: warning: assignment to 'rlInt32_t (*)(rlUInt8_t)' {aka 'int (*)(unsigned char)'} from incompatible pointer type 'int32_t (*)(uint8_t)' {aka 'long int (*)(unsigned char)'} [-Wincompatible-pointer-types]
-   47 |     clientCtx.devCtrlCb.rlDeviceEnable  = Host_enableDevice;
+   47 |     clientCtx.devCtrlCb.rlDeviceDisable = Host_disableDevice;
       |                                         ^
-../src/main.c:53:36: warning: assignment to 'void (*)(rlUInt8_t,  rlUInt16_t,  rlUInt16_t,  rlUInt8_t *)' {aka 'void (*)(unsigned char,  short unsigned int,  short unsigned int,  unsigned char *)'} from incompatible pointer type 'void (*)(uint16_t,  uint16_t,  uint16_t,  uint16_t *)' {aka 'void (*)(short unsigned int,  short unsigned int,  short unsigned int,  short unsigned int *)'} [-Wincompatible-pointer-types]
-   53 |     clientCtx.eventCb.rlAsyncEvent = Host_asyncEventHandler;
+../src/main.c:48:41: warning: assignment to 'rlInt32_t (*)(rlUInt8_t)' {aka 'int (*)(unsigned char)'} from incompatible pointer type 'int32_t (*)(uint8_t)' {aka 'long int (*)(unsigned char)'} [-Wincompatible-pointer-types]
+   48 |     clientCtx.devCtrlCb.rlDeviceEnable  = Host_enableDevice;
+      |                                         ^
+../src/main.c:51:52: warning: assignment to 'rlInt32_t (*)(rlUInt8_t,  void (*)(rlUInt8_t,  void *), void *)' {aka 'int (*)(unsigned char,  void (*)(unsigned char,  void *), void *)'} from incompatible pointer type 'int32_t (*)(uint8_t,  void (*)(rlUInt8_t,  void *), void *)' {aka 'long int (*)(unsigned char,  void (*)(unsigned char,  void *), void *)'} [-Wincompatible-pointer-types]
+   51 |     clientCtx.devCtrlCb.rlRegisterInterruptHandler = Host_registerInterruptHandler;
+      |                                                    ^
+../src/main.c:52:47: warning: assignment to 'rlInt32_t (*)(void *, rlUInt8_t)' {aka 'int (*)(void *, unsigned char)'} from incompatible pointer type 'int32_t (*)(uint8_t,  uint32_t)' {aka 'long int (*)(unsigned char,  long unsigned int)'} [-Wincompatible-pointer-types]
+   52 |     clientCtx.devCtrlCb.rlDeviceWaitIrqStatus = Host_deviceWaitIrqStatus;
+      |                                               ^
+../src/main.c:54:36: warning: assignment to 'void (*)(rlUInt8_t,  rlUInt16_t,  rlUInt16_t,  rlUInt8_t *)' {aka 'void (*)(unsigned char,  short unsigned int,  short unsigned int,  unsigned char *)'} from incompatible pointer type 'void (*)(uint16_t,  uint16_t,  uint16_t,  uint16_t *)' {aka 'void (*)(short unsigned int,  short unsigned int,  short unsigned int,  short unsigned int *)'} [-Wincompatible-pointer-types]
+   54 |     clientCtx.eventCb.rlAsyncEvent = Host_asyncEventHandler;
       |                                    ^
-../src/main.c:55:31: warning: assignment to 'rlInt32_t (*)(rlUInt32_t)' {aka 'int (*)(unsigned int)'} from incompatible pointer type 'int32_t (*)(uint32_t)' {aka 'long int (*)(long unsigned int)'} [-Wincompatible-pointer-types]
-   55 |     clientCtx.timerCb.rlDelay = Host_osiSleep;
+../src/main.c:69:31: warning: assignment to 'rlInt32_t (*)(rlUInt32_t)' {aka 'int (*)(unsigned int)'} from incompatible pointer type 'int32_t (*)(uint32_t)' {aka 'long int (*)(long unsigned int)'} [-Wincompatible-pointer-types]
+   69 |     clientCtx.timerCb.rlDelay = Host_osiSleep;
       |                               ^
-../src/main.c:80:9: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
-   80 |         sleep(1);
+../src/main.c:96:9: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   96 |         sleep(1);
       |         ^~~~~
 'Finished building: ../src/main.c'
 ' '
@@ -50,6 +86,6 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size APP_AWR_SER.elf  |tee "APP_AWR_SER.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 116083	   2656	  23944	 142683	  22d5b	APP_AWR_SER.elf
+ 167699	   3432	  23976	 195107	  2fa23	APP_AWR_SER.elf
 'Finished building: APP_AWR_SER.elf.size'
 ' '
